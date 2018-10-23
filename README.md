@@ -21,6 +21,24 @@ npm i rn-multiselect
   placeholder="Click here to choose"
 />
 ```
+
+<h1 align="center">
+  <img width="300" src="https://github.com/ricardo93borges/rn-multiselect/blob/master/media/img1.jpg" />
+</h1>
+<br/>
+<h1 align="center">
+  <img width="300" src="https://github.com/ricardo93borges/rn-multiselect/blob/master/media/img2.jpg" /><br/>
+</h1>
+<br/>
+<h1 align="center">
+  <img width="300" src="https://github.com/ricardo93borges/rn-multiselect/blob/master/media/img3.jpg" /><br/>
+</h1>
+<br/>
+<h1 align="center">
+  <img width="300" src="https://github.com/ricardo93borges/rn-multiselect/blob/master/media/img4.jpg" /><br/>
+</h1>
+<br/>
+
 ###### Props
 
 * **data _(required)_:** Options, expect an array of objects with key and label
