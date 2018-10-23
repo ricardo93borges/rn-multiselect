@@ -47,13 +47,14 @@ export default class MultiSelect extends Component {
   }
 
   toggleModal() {
+    console.log("toggle")
     this.setState({ modalVisible: !this.state.modalVisible })
   }
 
   renderTags = () => {
     let items = []
     let selectedItems =
-      this.state.selectedItems.length > 0 ? this.state.selectedItems : this.props.selectedOptions
+      this.state.selectedItems.length === 0 ? this.props.selectedOptions : this.state.selectedItems
 
     selectedItems.map(key => {
       let item = this.props.data.find(elem => elem.key === key)
@@ -62,7 +63,7 @@ export default class MultiSelect extends Component {
 
     if (items.length > 0) {
       return (
-        <ScrollView contentContainerStyle={[styles.horizontalLine, styles.tagInput]}>
+        <View style={[styles.horizontalLine, styles.tagInput]}>
           {items.map(item => {
             return (
               <Text key={item.key} style={styles.tag}>
@@ -70,7 +71,7 @@ export default class MultiSelect extends Component {
               </Text>
             )
           })}
-        </ScrollView>
+        </View>
       )
     } else {
       return (
@@ -138,5 +139,6 @@ MultiSelect.propTypes = {
 
 MultiSelect.defaultProps = {
   placeholder: "Touch to choose tags",
-  modalFooterText: "SUBMIT"
+  modalFooterText: "SUBMIT",
+  selectedOptions: []
 }
