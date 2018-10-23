@@ -1,2 +1,3 @@
-# rn-multiselect
+# RN Multiselect
+
 Multiselect component for react native
