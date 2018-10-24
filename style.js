@@ -47,8 +47,7 @@ export default StyleSheet.create({
     justifyContent: "flex-start",
     flexDirection: "row",
     alignItems: "flex-start",
-    padding: 10,
-    maxHeight: 78
+    padding: 10
   },
   tag: {
     padding: 5,
@@ -56,5 +55,9 @@ export default StyleSheet.create({
     color: "#FFF",
     margin: 2,
     borderRadius: 6
+  },
+  placeholder: {
+    padding: 10,
+    color: "#CCC"
   }
 })

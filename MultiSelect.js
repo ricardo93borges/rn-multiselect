@@ -47,8 +47,30 @@ export default class MultiSelect extends Component {
   }
 
   toggleModal() {
-    console.log("toggle")
     this.setState({ modalVisible: !this.state.modalVisible })
+  }
+
+  renderSomeTags = (items, quantity) => {
+    let selectedOptions = items.slice(0, quantity)
+    let rest = items.length - quantity
+
+    return (
+      <View style={[styles.horizontalLine, styles.tagInput]}>
+        {selectedOptions.map(item => {
+          return (
+            <Text key={item.key} style={styles.tag}>
+              {item.label}
+            </Text>
+          )
+        })}
+        {rest > 0 && (
+          <Text style={styles.placeholder}>
+            {" "}
+            + {rest} {rest > 1 ? "tags" : "tag"}
+          </Text>
+        )}
+      </View>
+    )
   }
 
   renderTags = () => {
@@ -62,21 +84,11 @@ export default class MultiSelect extends Component {
     })
 
     if (items.length > 0) {
-      return (
-        <View style={[styles.horizontalLine, styles.tagInput]}>
-          {items.map(item => {
-            return (
-              <Text key={item.key} style={styles.tag}>
-                {item.label}
-              </Text>
-            )
-          })}
-        </View>
-      )
+      return this.renderSomeTags(items, 2)
     } else {
       return (
         <View style={[styles.horizontalLine, styles.tagInput]}>
-          <Text style={{ padding: 10, color: "#CCC" }}>{this.props.placeholder}</Text>
+          <Text style={styles.placeholder}>{this.props.placeholder}</Text>
         </View>
       )
     }
