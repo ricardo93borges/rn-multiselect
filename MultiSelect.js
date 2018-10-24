@@ -84,7 +84,7 @@ export default class MultiSelect extends Component {
     })
 
     if (items.length > 0) {
-      return this.renderSomeTags(items, 2)
+      return this.renderSomeTags(items, this.props.displayOptionsLimit)
     } else {
       return (
         <View style={[styles.horizontalLine, styles.tagInput]}>
@@ -146,11 +146,13 @@ MultiSelect.propTypes = {
   selectedOptions: PropTypes.arrayOf(PropTypes.number),
   placeholder: PropTypes.string,
   modalFooterText: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  displayOptionsLimit: PropTypes.number
 }
 
 MultiSelect.defaultProps = {
   placeholder: "Touch to choose tags",
   modalFooterText: "SUBMIT",
-  selectedOptions: []
+  selectedOptions: [],
+  displayOptionsLimit:2
 }
