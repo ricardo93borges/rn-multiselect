@@ -19,6 +19,7 @@ npm i rn-multiselect
   onChange={values => this.setState({ selectedOptions: values })}
   modalFooterText="Submit"
   placeholder="Click here to choose"
+  displayOptionsLimit={5}
 />
 ```
 
@@ -46,3 +47,4 @@ npm i rn-multiselect
 * **onChange:** Function that is called when a option is selected, returns selected options
 * **modalFooterText:** Text displayed on modal's footer
 * **placeholder:** Text displayed when there is no tag selected
+* **displayOptionsLimit:** Limit of selected options displayed, default is 2. 
