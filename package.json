@@ -1,8 +1,8 @@
 {
   "name": "rn-multiselect",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Multiselect component for React Native",
-  "main": "index.js",
+  "main": "MultiSelect.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/ricardo93borges/rn-multiselect.git"
   },
-  "keywords": ["react", "react-native", "js", "javascript", "component", "select", "multiselect"],
+  "keywords": [
+    "react",
+    "react-native",
+    "js",
+    "javascript",
+    "component",
+    "select",
+    "multiselect"
+  ],
   "author": "Ricardo Borges",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ricardo93borges/rn-multiselect/issues"
   },
   "homepage": "https://github.com/ricardo93borges/rn-multiselect#readme",
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
